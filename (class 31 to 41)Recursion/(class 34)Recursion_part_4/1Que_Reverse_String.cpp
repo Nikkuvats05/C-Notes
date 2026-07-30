@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void reverse(string& str, int s, int e){
+    if(s>e)
+    return;
+    swap(str[s],str[e]);
+    s++;
+    e--;
+    reverse(str, s, e);
+}
+
+int main(){
+    string s="abcde";
+    reverse(s, 0, s.length()-1);
+    cout<<s<<endl;
+}
